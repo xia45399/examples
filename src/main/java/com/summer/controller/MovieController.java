@@ -1,6 +1,6 @@
 package com.summer.controller;
 
-import com.summer.bean.Movie;
+import com.summer.pojo.Movie;
 import com.summer.dao.MovieMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

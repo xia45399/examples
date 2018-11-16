@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.summer.dao.MovieMapper">
 
-    <insert id="insert" parameterType="com.summer.bean.Movie" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insert" parameterType="com.summer.pojo.Movie" useGeneratedKeys="true" keyProperty="id">
         insert into movie (name,add_time) values (#{name},#{addTime})
     </insert>
 
