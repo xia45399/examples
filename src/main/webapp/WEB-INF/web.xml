@@ -6,7 +6,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:spring/application.xml</param-value>
+        <param-value>classpath*:mybatis/mybatis.xml</param-value>
     </context-param>
     <!--listen的作用是什么 不加就会导致application.xml未生效-->
     <listener>
