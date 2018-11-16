@@ -5,7 +5,18 @@
 <mapper namespace="com.summer.dao.MovieMapper">
 
     <insert id="insert" parameterType="com.summer.pojo.Movie" useGeneratedKeys="true" keyProperty="id">
-        insert into movie (name,add_time) values (#{name},#{addTime})
+        INSERT INTO movie (name,add_time) VALUES (#{name},#{addTime})
     </insert>
 
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE FROM movie WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.summer.pojo.Movie">
+        UPDATE movie SET name=#{name} WHERE id=#{id}
+    </update>
+
+    <select id="list" resultType="com.summer.pojo.Movie">
+        SELECT * FROM movie
+    </select>
 </mapper>
