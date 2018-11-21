@@ -45,5 +45,6 @@
 
     </mvc:annotation-driven>
     <content:component-scan base-package="com.summer.controller"/>
+    <content:component-scan base-package="com.summer.service"/>
 
 </beans>
