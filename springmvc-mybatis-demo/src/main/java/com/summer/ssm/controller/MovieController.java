@@ -1,7 +1,7 @@
-package com.summer.controller;
+package com.summer.ssm.controller;
 
-import com.summer.pojo.Movie;
-import com.summer.service.MovieService;
+import com.summer.ssm.pojo.Movie;
+import com.summer.ssm.service.MovieService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

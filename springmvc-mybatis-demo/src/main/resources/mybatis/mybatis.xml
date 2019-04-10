@@ -30,6 +30,6 @@
         <!-- 注入sqlSessionFactory 此处的value 相当于ref-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!-- 需要扫描Dao接口包 -->
-        <property name="basePackage" value="com.summer.dao"/>
+        <property name="basePackage" value="com.summer.ssm.dao"/>
     </bean>
 </beans>

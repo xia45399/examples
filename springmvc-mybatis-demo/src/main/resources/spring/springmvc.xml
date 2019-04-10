@@ -44,7 +44,7 @@
         </mvc:message-converters>
 
     </mvc:annotation-driven>
-    <content:component-scan base-package="com.summer.controller"/>
-    <content:component-scan base-package="com.summer.service"/>
+    <content:component-scan base-package="com.summer.ssm.controller"/>
+    <content:component-scan base-package="com.summer.ssm.service"/>
 
 </beans>

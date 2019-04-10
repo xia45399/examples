@@ -1,6 +1,6 @@
-package com.summer.dao;
+package com.summer.ssm.dao;
 
-import com.summer.pojo.Movie;
+import com.summer.ssm.pojo.Movie;
 
 import java.util.List;
 

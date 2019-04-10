@@ -1,4 +1,4 @@
-package com.summer.controller;
+package com.summer.ssm.controller;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.web.bind.annotation.RequestMapping;

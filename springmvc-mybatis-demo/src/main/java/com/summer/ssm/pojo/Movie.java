@@ -1,4 +1,4 @@
-package com.summer.pojo;
+package com.summer.ssm.pojo;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
-package com.summer.service;
+package com.summer.ssm.service;
 
-import com.summer.dao.MovieMapper;
-import com.summer.pojo.Movie;
+import com.summer.ssm.dao.MovieMapper;
+import com.summer.ssm.pojo.Movie;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
