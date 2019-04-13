@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   application:
     name: spring-boot-rabbitmq-demo
@@ -10,4 +12,11 @@ spring:
     port: 5172
     virtual-host: test
     publisher-confirms: true
-
+    listener:
+#      direct:
+#        acknowledge-mode: manual
+#        prefetch: 3
+#        consumers-per-queue:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 20
