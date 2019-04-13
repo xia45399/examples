@@ -27,6 +27,14 @@ public class DemoController {
         mqUtils.sendMsg(mqMsg);
     }
 
+    @RequestMapping("/mq/sendAndReceive")
+    public Object sendAndReceive() {
+        MqMsg mqMsg = new MqMsg();
+        mqMsg.setName("哈哈");
+        mqMsg.setTime(System.currentTimeMillis());
+        return mqUtils.sendAndReveive(mqMsg);
+    }
+
     @RequestMapping("/mq/receive")
     public void receive() {
         mqUtils.receiveMsg();

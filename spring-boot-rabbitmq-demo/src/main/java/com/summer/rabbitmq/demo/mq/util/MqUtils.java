@@ -25,4 +25,8 @@ public class MqUtils {
         //发到默认exchange 默认exchange的name为空
         rabbitTemplate.convertAndSend(routerKey, msg);
     }
+
+    public Object sendAndReveive(MqMsg msg) {
+        return rabbitTemplate.convertSendAndReceive(routerKey, msg);
+    }
 }

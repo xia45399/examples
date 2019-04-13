@@ -19,7 +19,7 @@ public class MsgReceiver {
 
     private static Log log = LogFactory.getLog(MsgReceiver.class);
 
-    @RabbitHandler()
+//    @RabbitHandler()
     public void process(MqMsg msg, Channel channel, @Headers Map<String, Object> map) {
         log.info("Receiver1 : " + msg);
         long deliveryTag = (long) map.get(AmqpHeaders.DELIVERY_TAG);
@@ -40,5 +40,14 @@ public class MsgReceiver {
                 }
             }
         }.start();
+    }
+
+    @RabbitHandler()
+    public MqMsg receiveAndSend(MqMsg msg, Channel channel, @Headers Map<String, Object> map) {
+        log.info("receiveAndReply: " + msg);
+        long deliveryTag = (long) map.get(AmqpHeaders.DELIVERY_TAG);
+        asyncService(msg, channel, deliveryTag);
+        msg.setName("回复");
+        return msg;
     }
 }
