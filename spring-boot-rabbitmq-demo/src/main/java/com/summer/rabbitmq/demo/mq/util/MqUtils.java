@@ -1,4 +1,4 @@
-package com.summer.rabbitmq.demo.mq;
+package com.summer.rabbitmq.demo.mq.util;
 
 import com.summer.rabbitmq.demo.mq.msg.MqMsg;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -9,7 +9,6 @@ import javax.annotation.Resource;
 
 @Component
 public class MqUtils {
-    private String exchangeName = "exchange";
 
     private String queueName = "testQueue";
     private String routerKey = queueName;
