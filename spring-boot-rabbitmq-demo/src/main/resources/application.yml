@@ -12,6 +12,8 @@ spring:
     port: 5172
     virtual-host: test
     publisher-confirms: true
+    template:
+      exchange: test.direct
     listener:
 #      direct:
 #        acknowledge-mode: manual
