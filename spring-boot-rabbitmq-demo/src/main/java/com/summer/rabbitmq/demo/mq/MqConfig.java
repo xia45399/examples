@@ -13,21 +13,28 @@ public class MqConfig {
     @Value("${spring.rabbitmq.template.exchange}")
     private String exchangeName;
 
-    private String queueName = "testQueue";
-
     @Bean
     DirectExchange exchange() {
         return new DirectExchange(exchangeName);
     }
 
     @Bean
-    Queue queue() {
-        return new Queue(queueName, true);
+    Queue queue1() {
+        return new Queue("queue1", true, false, true);
     }
 
     @Bean
-    Binding binding(Queue queue, DirectExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(queueName);
+    Queue queue2() {
+        return new Queue("queue2", true, false, true);
     }
 
+    @Bean
+    Binding binding1(Queue queue1, DirectExchange exchange) {
+        return BindingBuilder.bind(queue1).to(exchange).with(queue1.getName());
+    }
+
+    @Bean
+    Binding binding2(Queue queue2, DirectExchange exchange) {
+        return BindingBuilder.bind(queue2).to(exchange).with(queue2.getName());
+    }
 }
