@@ -11,4 +11,6 @@ public interface StudenMapper {
     List<Student> listAllStudents();
 
     Student getStudentById(Long id);
+
+    List<Student> listStudentsPage();
 }

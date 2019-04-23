@@ -10,4 +10,8 @@
     <select id="getStudentById" resultType="com.summer.springboot.mybatis.demo.pojo.Student" parameterType="long">
         SELECT * FROM student where id=#{id}
     </select>
+
+    <select id="listStudentsPage" resultType="com.summer.springboot.mybatis.demo.pojo.Student">
+        select * FROM student
+    </select>
 </mapper>

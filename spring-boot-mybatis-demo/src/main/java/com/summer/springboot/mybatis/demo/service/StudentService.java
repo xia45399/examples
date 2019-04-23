@@ -21,4 +21,8 @@ public class StudentService {
     public Student getStudentById(Long id) {
         return studenMapper.getStudentById(id);
     }
+
+    public List<Student> listStudentsPage() {
+        return studenMapper.listStudentsPage();
+    }
 }
