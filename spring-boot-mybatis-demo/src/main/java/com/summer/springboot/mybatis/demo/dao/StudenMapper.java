@@ -8,5 +8,7 @@ import java.util.List;
 @Mapper
 public interface StudenMapper {
 
-    public List<Student> qryAll();
+    List<Student> listAllStudents();
+
+    Student getStudentById(Long id);
 }
