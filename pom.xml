@@ -12,5 +12,7 @@
         <module>springmvc-mybatis-demo</module>
         <module>spring-boot-rabbitmq-demo</module>
         <module>spring-boot-redis-demo</module>
+        <module>spring-boot-mybatis-demo</module>
+        <module>spring-boot-stop</module>
     </modules>
 </project>
