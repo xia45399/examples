@@ -1,8 +1,0 @@
-server:
-  port: 8080
-spring:
-  application:
-    name: spring-boot-redis-demo
-  redis:
-    host: 192.168.1.238
-    password: redis12378900
